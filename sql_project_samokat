@@ -1,14 +1,14 @@
 SQL ЗАПРОСЫ ДЛЯ БАЗЫ ДАННЫХ
 
 Задание 1
+ИСПРАВЛЕНАЯ ВЕРСИЯ:
 
 SELECT	c.login,
-		COUNT(o."inDelivery") AS "deliveryCount"
+		COUNT(o."track") AS "Orders_in_Delivery"
 FROM "Couriers" AS c
 INNER JOIN "Orders" AS o ON c.id = o."courierId"
 WHERE o."inDelivery" = True
 GROUP BY c.login;
-
 
 
 Задание 2
